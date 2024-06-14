@@ -14,21 +14,76 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header style="background-color: aqua;">
+        <!--<header style="background-color: aqua;">-->
             <h1>Website Konversi Suhu</h1>
             <link rel="stylesheet" href="css/style.css">
         </header>
-        <body>
-            <p>Celcius</p>
-            <textarea rows="8" cols="64"> Ketik Disini</textarea> 
+        <main>
+            <h4>Masukkan suhu derajat celcius(&deg;C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan haasil konversi dalam bentuk Fahrenheit (&deg;F)</h4>
+            
+            
+            <!--Celcius-->
+            <section class="celcius-contaiuner">
+                <Header>
+                    <h3>Celcius(&deg;C) :</h3>
+                </Header>
+                <Section>
+                    <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                </Section>
+                <Section>
+                    <button class="button green-color">Konversi</button>
+                    <button class="button pink-color">Reset</button>
+                    <button class="button blue-color">Reverse</button>
+                </Section>
+            </section>
+
+            <section class="result-container">
+                <!--Fahrenheit-->
+                <section>
+                    <Header>
+                        <h3>Fahrenheit (&deg;F) :</h3>
+                    </Header>
+                    <Section>
+                        <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                    </Section>
+                </section>
+                <!--Calculate-->
+                <section>
+                    <Header>
+                        <h3>Convertion Calculate</h3>
+                    </Header>
+                    <Section>
+                        <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                    </Section>
+                </section>
+            </section>
             <br>
-            <p>Fahrenheit</p>
-            <textarea rows="8" cols="64"> Ketik Disini</textarea> 
-
+            <hr/>
+            <!--Formula/Info-->
+            <section>
+                <Header>
+                    <h1>Cara Konversi dari Celcius(&deg;C) ke Fahrenheit(&deg;F)</h1>
+                    
+                </Header>
+                <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit(&deg;F) 
+                    sama dengan suhu <span class="subject-info">S</span> dalam derajat Celcius(&deg;C)
+                </p>
+                <p>Celcius(&deg;C) kali <span class="subject-info">9/5</span> tambah <span class="subject-info">32</span></p>
+                <p>
+                    <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
+                    (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
+                </p>
+                <p>atau</p>
+                <p>
+                    <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
+                    (<span class="subject-info">S</span><sub>(&deg;F)</sub> +32) / 1,8
+                </p>
+            </section>
             <script src="js/script.js"></script>
-        </body>
+        </main>
         <footer>
-
+        <hr/>
+            <h4>Meiliza</h4>
         </footer>
     </body>
 </html>
