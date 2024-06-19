@@ -4,7 +4,7 @@
     font-family: math;
 }
 .celcius-contaiuner{
-    text-align: center;
+    text-align: Left;
 
 }
 textarea{
@@ -24,7 +24,7 @@ textarea{
 }
 .result-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
 }
 
 .green-color{
@@ -38,4 +38,14 @@ textarea{
 .blue-color{
     background-color: rgb(171, 239, 239) ;
     color: black;
+}
+
+.box {
+    width: 800px; 
+    height: 400px; 
+    margin: 0 auto;
+}
+
+.rowcenter {
+    align-items: center;
 }

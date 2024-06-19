@@ -2,7 +2,7 @@
 
 function celtofah(){
     let celcius = document.getElementById("Cel").value;
-    let fahrenheit = document.getElementById("Fah").value;
+    document.getElementById("Fah").value="";
     let hslkonv = parseInt (celcius) * 9/5 + 32;
     document.getElementById("hsl").value = hslkonv;
 
@@ -10,7 +10,7 @@ function celtofah(){
 
 
 function fahtocel(){
-    let celcius = document.getElementById("Cel").value;
+    document.getElementById("Cel").value = "";
     let fahrenheit = document.getElementById("Fah").value;
     let hslkonv = (parseInt (fahrenheit) + 32) / 1.8;
     document.getElementById("hsl").value = hslkonv;
@@ -23,8 +23,18 @@ function reverse() {
 
     if (currentFunction === "celtofah()") {
         konversiButton.setAttribute("onclick", "fahtocel()");
+        document.getElementById("Cel").disabled=true;
+        document.getElementById("Fah").disabled=false;
+        document.getElementById("Fah").value = document.getElementById("Cel").value ;
+        document.getElementById("Cel").value = "";
+        document.getElementById("hsl").value = "";
     } else {
         konversiButton.setAttribute("onclick", "celtofah()");
+        document.getElementById("Cel").disabled=false;
+        document.getElementById("Fah").disabled=true;
+        document.getElementById("Cel").value = document.getElementById("Fah").value ;
+        document.getElementById("Fah").value = "";
+        document.getElementById("hsl").value = "";
     }
 }
 

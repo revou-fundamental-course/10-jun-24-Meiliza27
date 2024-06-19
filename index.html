@@ -3,87 +3,101 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
-        <title>Konversi Suhu
-        </title>
-        <style>
-            
-            table, th, td {
-                border: 1px solid black;
-            }
-        </style>
+
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!--<header style="background-color: aqua;">-->
-            <h1>Website Konversi Suhu</h1>
+        <header style="background-color: aqua;">
+            <h1>Fahrenheit dan Celcius</h1>
             <link rel="stylesheet" href="css/style.css">
         </header>
         <main>
-            <h4>Masukkan suhu derajat celcius(&deg;C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan haasil konversi dalam bentuk Fahrenheit (&deg;F)</h4>
-            
-            
-            <!--Celcius-->
-            <section class="celcius-contaiuner">
-                <Header>
-                    <h3>Celcius(&deg;C) :</h3>
-                </Header>
-                <Section>
-                    <input id="Cel" name="Cel" type="number" placeholder="input nilai"></input>
-                </Section>
-                <Section>
-                    <button class="button green-color" id="konversi" onclick="fahtocel()">Konversi</button>
-                    <button class="button pink-color" onclick="reset()">Reset</button>
-                    <button class="button blue-color" onclick="reverse()">Reverse</button>
-                </Section>
-            </section>
+            <main class="box">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h4>Masukkan suhu derajat celcius(&deg;C) ke kotak dibawah, 
+                            lalu klik tombol konversi untuk mendapatkan haasil konversi 
+                            dalam bentuk Fahrenheit (&deg;F)</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <!--Celcius-->
+                        <section class="celcius-contaiuner">
+                            <Header>
+                                <h3>Celcius(&deg;C) :</h3>
+                            </Header>
+                            <Section>
+                                <input id="Cel" name="Cel" type="number" placeholder="input nilai"></input>
+                            </Section>
+                        </section>
+                    </td>
+                    <td rowspan="2">
+                        <!--Calculate-->
+                        <section>
+                            <Header>
+                                <h3>Convertion Calculate</h3>
+                            </Header>
+                            <Section>
+                                <input id="hsl" name="hsl" type="number" placeholder="Hasil Konversi"> </input>
+                            </Section>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!--Fahrenheit-->
+                        <section>
+                            <Header>
+                                <h3>Fahrenheit (&deg;F) :</h3>
+                            </Header>
+                            <Section>
+                                <input id="Fah" name="Fah" type="number" placeholder="input nilai" disabled> </input>
+                            </Section>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <!--Tombol-->
+                        <Section>
+                            <button  id="konversi" onclick="celtofah()">Konversi</button>
+                            <button  onclick="reset()">Reset</button>
+                            <button  onclick="reverse()">Reverse</button>
+                        </Section>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!--Formula/Info-->
+                        <section>
+                            <Header>
+                                <h1>Cara Konversi dari Celcius(&deg;C) ke Fahrenheit(&deg;F)</h1>
+                                
+                            </Header>
+                            <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit(&deg;F) 
+                                sama dengan suhu <span class="subject-info">S</span> dalam derajat Celcius(&deg;C)
+                            </p>
+                            <p>Celcius(&deg;C) kali <span class="subject-info">9/5</span> tambah <span class="subject-info">32</span></p>
+                            <p>
+                                <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
+                                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
+                            </p>
+                            <p>atau</p>
+                            <p>
+                                <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
+                                (<span class="subject-info">S</span><sub>(&deg;F)</sub> +32) / 1,8
+                            </p>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        
 
-            <section class="result-container">
-                <!--Fahrenheit-->
-                <section>
-                    <Header>
-                        <h3>Fahrenheit (&deg;F) :</h3>
-                    </Header>
-                    <Section>
-                        <input id="Fah" name="Fah" type="number" placeholder="input nilai"> </input>
-                    </Section>
-                </section>
-                <!--Calculate-->
-                <section>
-                    <Header>
-                        <h3>Convertion Calculate</h3>
-                    </Header>
-                    <Section>
-                        <input id="hsl" name="hsl" type="number" placeholder="Hasil Konversi"> </input>
-                    </Section>
-                </section>
-            </section>
-            <br>
-            <hr/>
-            <!--Formula/Info-->
-            <section>
-                <Header>
-                    <h1>Cara Konversi dari Celcius(&deg;C) ke Fahrenheit(&deg;F)</h1>
-                    
-                </Header>
-                <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit(&deg;F) 
-                    sama dengan suhu <span class="subject-info">S</span> dalam derajat Celcius(&deg;C)
-                </p>
-                <p>Celcius(&deg;C) kali <span class="subject-info">9/5</span> tambah <span class="subject-info">32</span></p>
-                <p>
-                    <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                    (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
-                </p>
-                <p>atau</p>
-                <p>
-                    <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
-                    (<span class="subject-info">S</span><sub>(&deg;F)</sub> +32) / 1,8
-                </p>
-            </section>
+            
             <script src="js/script.js"></script>
         </main>
-        <footer>
-        <hr/>
-            <h4>Meiliza</h4>
-        </footer>
+      
     </body>
 </html>
