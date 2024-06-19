@@ -28,12 +28,12 @@
                     <h3>Celcius(&deg;C) :</h3>
                 </Header>
                 <Section>
-                    <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                    <input id="Cel" name="Cel" type="number" placeholder="input nilai"></input>
                 </Section>
                 <Section>
-                    <button class="button green-color">Konversi</button>
-                    <button class="button pink-color">Reset</button>
-                    <button class="button blue-color">Reverse</button>
+                    <button class="button green-color" id="konversi" onclick="fahtocel()">Konversi</button>
+                    <button class="button pink-color" onclick="reset()">Reset</button>
+                    <button class="button blue-color" onclick="reverse()">Reverse</button>
                 </Section>
             </section>
 
@@ -44,7 +44,7 @@
                         <h3>Fahrenheit (&deg;F) :</h3>
                     </Header>
                     <Section>
-                        <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                        <input id="Fah" name="Fah" type="number" placeholder="input nilai"> </input>
                     </Section>
                 </section>
                 <!--Calculate-->
@@ -53,7 +53,7 @@
                         <h3>Convertion Calculate</h3>
                     </Header>
                     <Section>
-                        <textarea rows="2" cols="30"> Ketik Disini</textarea>
+                        <input id="hsl" name="hsl" type="number" placeholder="Hasil Konversi"> </input>
                     </Section>
                 </section>
             </section>
