@@ -1,7 +1,8 @@
 
 /*celcius to Fahrenheit */
 function celtofah(){
-    
+    document.getElementById("Cel").disabled=false;
+    document.getElementById("Fah").disabled=true;
     let celcius = document.getElementById("Cel").value;
     document.getElementById("Fah").value="";
     let hslkonv = Math.round(parseInt (celcius) * (9/5) + 32);
@@ -16,6 +17,8 @@ function celtofah(){
 
 /*Fahrenheit to celcius*/
 function fahtocel(){
+    document.getElementById("Cel").disabled=true;
+    document.getElementById("Fah").disabled=false;
     document.getElementById("Cel").value = "";
     let fahrenheit = document.getElementById("Fah").value;
     let hslkonv = Math.round((parseInt (fahrenheit) - 32) * (5/9));
@@ -59,5 +62,7 @@ function reset(){
     document.getElementById("Fah").value = "";
     document.getElementById("hsl").value = "";
     document.getElementById("konversi").setAttribute("onclick", "celtofah()");
+    document.getElementById("Cel").disabled=false;
+    document.getElementById("Fah").disabled=true;
     alert("Data telah direset.")
 }
