@@ -1,9 +1,23 @@
+h1 {
+    text-align: center;
+}
+
 .subject-info{
     font-size: 24px;
     font-style: italic;
     font-family: math;
 }
-.celcius-contaiuner{
+
+.container{
+    width:600px;
+    margin : 50px auto;
+    padding : 20px;
+    border-radius: 8px;
+    background-color: hsla(0, 0%, 100%, 0.322);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.celcius-container{
     text-align: Left;
 
 }
@@ -14,6 +28,7 @@ textarea{
     border: 2px solid black;
     font-family: math;
     font-size: 14px;
+    height: fit-content;
 }
 .button{
     font-family: math;
@@ -40,12 +55,41 @@ textarea{
     color: black;
 }
 
-.box {
-    width: 800px; 
-    height: 400px; 
-    margin: 0 auto;
+
+
+.buttonstyle1 {
+    font-size: 24px;
+    border-radius: 12px;
+    padding: 32px 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
 }
 
-.rowcenter {
-    align-items: center;
+  .button1:hover {
+    background-color: #04AA6D;
+  }
+
+/*mobile view*/
+@media (max-width: 700px){
+    .container{
+        width:90%;
+        margin : 20px auto;
+        padding : 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    input {
+        width : 100%;
+    }
+    button {
+        width : 100%;
+        margin: 10px 0;
+    }
+    .info p {
+        font-size: 12px;
+    }
 }
